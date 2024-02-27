@@ -6,7 +6,7 @@ export const List = ({items}) => {
 
   const navigate = useNavigate();
   const navigateToDetail = (counryName) => {
-    navigate('/detail/'+counryName.toLowerCase());
+    navigate('/restcountries/detail/'+counryName.toLowerCase());
   }
 
   return (
