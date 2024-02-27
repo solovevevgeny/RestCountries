@@ -4,10 +4,15 @@ import './index.css';
 
 import MainPage from "./pages/MainPage";
 import DetailPage from "./pages/DetailPage";
+import NotFoundPage from './pages/NotFoundPage';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
+  {
+    path: '*',
+    element: <NotFoundPage />
+  },
   {
     path: '/',
     element: <MainPage />
