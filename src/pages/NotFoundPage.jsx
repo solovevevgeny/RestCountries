@@ -1,3 +1,6 @@
+
+import { useRouteError } from "react-router-dom";
+
 function NotFoundPage() {
     const error = useRouteError();
     console.error(error);
