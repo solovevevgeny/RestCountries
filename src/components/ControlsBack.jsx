@@ -11,7 +11,7 @@ const ControlsBack = () => {
   return (
     <section>
         <div className="container controls-back">
-            <button className='back' onClick={()=> { navigate(-1)}}>
+            <button className='back' onClick={()=> { navigate("/restcountries/")}}>
             <IoArrowBackSharp /> Back</button>
         </div>
     </section>
