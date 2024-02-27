@@ -1,5 +1,4 @@
 import React from 'react'
-import {useProps} from "react";
 
 export const Card = ({name, population, region, capital, flag, onclick}) => {
   return (

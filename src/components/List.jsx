@@ -1,8 +1,6 @@
 import React from 'react'
 import { Card } from "./Card";
-import { Navigate, useNavigate } from 'react-router-dom';
-import {useProps} from "react";
-
+import { useNavigate } from 'react-router-dom';
 
 export const List = ({items}) => {
   console.log(items);

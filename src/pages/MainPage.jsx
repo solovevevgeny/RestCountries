@@ -11,7 +11,6 @@ const MainPage = () => {
   const [countries, setCountries] = useState([]);
   const [filterCountries, setFilterCountries] = useState([]);
   
-  const [search, setSearch] = useState("");
 
   const [loaded, setLoaded] = useState(false);
 

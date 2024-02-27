@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { IoMoon, IoMoonOutline } from "react-icons/io5";
+import { IoMoon } from "react-icons/io5";
 
 import { Link } from 'react-router-dom';
 
