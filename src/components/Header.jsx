@@ -14,15 +14,15 @@ export const Header = () => {
   }
 
   return (
-    <div className="container">
-        <div className="header">
-                <div className="header__name">
-                    Where is world?
-                </div>
-                <div className="header__switch" onClick={switchTheme}>
-                <IoMoon /> {theme}
-                </div>
+    <section className="shadow header ">
+        <div className="container flex-sp-b">
+                    <div className="header__name">
+                        Where is world?
+                    </div>
+                    <div className="header__switch" onClick={switchTheme}>
+                    <IoMoon /> {theme}
+                    </div>
         </div>
-    </div>
+    </section>
   )
 }
