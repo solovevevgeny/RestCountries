@@ -3,7 +3,6 @@ import { Card } from "./Card";
 import { useNavigate } from 'react-router-dom';
 
 export const List = ({items}) => {
-  console.log(items);
 
   const navigate = useNavigate();
   const navigateToDetail = (counryName) => {
