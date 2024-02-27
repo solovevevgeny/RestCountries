@@ -27,15 +27,19 @@ const MainPage = () => {
   
   if (loaded) {
     const handleSearch = (search, region)=> {
+      setFilterCountries(countries);
       let data = [...countries];
+
+      if (region) {
+        data = data.filter(c => c.region.toLowerCase().includes(region.toLowerCase()));
+        setFilterCountries(data);        
+      }
 
       if (search) {
         data = data.filter(c => c.name.common.toLowerCase().includes(search.toLowerCase()));
         setFilterCountries(data);
       }
-      else {
-        setFilterCountries(countries);
-      }
+
     }
 
     return (

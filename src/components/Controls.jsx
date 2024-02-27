@@ -18,9 +18,10 @@ export const Controls = ({onSearch}) => {
         </div>
         <div className="controls__filter">
           <select name="" id="" onChange={(e)=>{setRegion(e.target.value)}}>
-            <option value="">123</option>
-            <option value="">321</option>
-            <option value="">333</option>
+            <option value="Europe">Europe</option>
+            <option value="Africa">Africa</option>
+            <option value="Oceania">Oceania</option>
+            <option value="Asia">Asia</option>
           </select>
         </div>
       </div>
