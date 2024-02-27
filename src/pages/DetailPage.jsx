@@ -6,6 +6,7 @@ import Detail from '../components/Detail';
 import axios from 'axios';
 
 import {useState, useEffect} from "react";
+import ControlsBack from '../components/ControlsBack';
 
 
  
@@ -18,7 +19,7 @@ const DetailPage = () => {
   const country = params.country;
 
   useEffect(()=>{
-    axios.get('https://restcountries.com/v3.1/name/'+country+'?fields=name,flags')
+    axios.get('https://restcountries.com/v3.1/name/'+country+'?fields=name,flags,population,region,subregion,currencies,languages,capital,tld')
     .then ((response) => {
         setCntr(response.data[0]);
         setLoaded(true)
@@ -26,10 +27,11 @@ const DetailPage = () => {
 },[country])
 
   if (loaded) {
-        console.log('loaded');
         return (
           <div>
               <Header />
+              <ControlsBack />
+
               <Detail data={cntr} />
           </div>
         )

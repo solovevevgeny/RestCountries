@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DetailCard = ({name, flag}) => {
+const DetailCard = ({name, flag, nativeName, population, region, capital, tld}) => {
   return (
     <section>
         <div className="container detail-card">
@@ -9,7 +9,30 @@ const DetailCard = ({name, flag}) => {
             </div>
 
             <div className="detail-card__info">
-                <h3>{name}</h3>
+
+              <div className="info__name">
+                <h1>{name}</h1>
+              </div>
+              <div className="info__table">
+                Native Name: {nativeName}
+              </div>
+
+              <div className="info__table">
+                Population: {population}
+              </div>
+
+              <div className="info__table">
+                Region: {region}
+              </div>
+
+              <div className="info__table">
+                Capital: {capital}
+              </div>
+
+              <div className="info__table">
+                Top Level Domain: {tld}
+              </div>
+
             </div>
         </div>
 

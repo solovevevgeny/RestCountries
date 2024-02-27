@@ -11,9 +11,12 @@ const Detail = (data) => {
     <div>
         <DetailCard
             name={country.name.common}
-            // nativeName={cntr.name.nativeName.common}
-            // // population={cntr.population}
+            nativeName={country.name.nativeName.common}
+            population={country.population}
             flag={country.flags.png}
+            region={country.region}
+            capital={country.capital}
+            tld={country.tld}
          />
     </div>
   )
