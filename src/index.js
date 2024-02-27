@@ -14,11 +14,11 @@ const router = createBrowserRouter([
     element: <NotFoundPage />
   },
   {
-    path: 'https://solovevevgeny.github.io/restcountries/',
+    path: '/restcountries/',
     element: <MainPage />
   },
   {
-    path: 'https://solovevevgeny.github.io/restcountries/detail/:country',
+    path: '/restcountries/detail/:country',
     element: <DetailPage />
   }
 ])
