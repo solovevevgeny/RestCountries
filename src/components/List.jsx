@@ -1,20 +1,11 @@
 import React from 'react'
 import { Card } from "./Card";
-import {useEffect, useState} from "react";
 import { Navigate, useNavigate } from 'react-router-dom';
+import {useProps} from "react";
 
 
-import axios from "axios";
-
-export const List = () => {
-  const [countries, setCountries] = useState([]);
-
-  useEffect( () => {
-    axios.get('https://restcountries.com/v3.1/all?fields=name,population,capital,flags,region')
-    .then ((response) => {
-      setCountries(response.data);
-    })
-  },[]);
+export const List = ({items}) => {
+  console.log(items);
 
   const navigate = useNavigate();
   const navigateToDetail = (counryName) => {
@@ -25,9 +16,8 @@ export const List = () => {
     <section>
         <div className="container list">
           {
-            countries.map ((item) => {
+            items.map ((item) => {
               
-              // console.log(item);
               return <Card 
                 key={item.name.common} 
                 name={item.name.common} 
