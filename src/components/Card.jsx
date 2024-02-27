@@ -1,9 +1,9 @@
 import React from 'react'
 import {useProps} from "react";
 
-export const Card = ({name, population, region, capital, flag}) => {
+export const Card = ({name, population, region, capital, flag, onclick}) => {
   return (
-    <div className="card shadow">
+    <div className="card shadow" onClick={()=>onclick(name)}>
         <div className="card__image">
             <img src={flag} width="100%" alt="" />
         </div>

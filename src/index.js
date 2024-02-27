@@ -3,9 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
+import MainPage from "./pages/MainPage";
+import DetailPage from "./pages/DetailPage";
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainPage />
+  },
+  {
+    path: '/detail/:country',
+    element: <DetailPage />
+  }
+])
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
+    {/* <App /> */}
   </React.StrictMode>
 );

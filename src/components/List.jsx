@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card } from "./Card";
 import {useEffect, useState} from "react";
+import { Navigate, useNavigate } from 'react-router-dom';
+
 
 import axios from "axios";
 
@@ -14,13 +16,18 @@ export const List = () => {
     })
   },[]);
 
+  const navigate = useNavigate();
+  const navigateToDetail = (counryName) => {
+    navigate('/detail/'+counryName.toLowerCase());
+  }
+
   return (
     <section>
         <div className="container list">
           {
             countries.map ((item) => {
               
-              console.log(item);
+              // console.log(item);
               return <Card 
                 key={item.name.common} 
                 name={item.name.common} 
@@ -28,6 +35,7 @@ export const List = () => {
                 region={item.region}
                 flag={item.flags.png}
                 capital={item.capital}
+                onclick={navigateToDetail}
               />
             })
 
