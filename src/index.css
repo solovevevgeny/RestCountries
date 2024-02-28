@@ -112,6 +112,7 @@ body[data-theme='dark']  {
     background: var(--color-element);
     border-radius: var(--br);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .card__body-name {
