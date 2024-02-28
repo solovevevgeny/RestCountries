@@ -19,7 +19,7 @@ export const Header = () => {
     <section className="shadow header ">
         <div className="container flex-sp-b">
                     <div className="header__name">
-                       <Link to="/"> Where is world?</Link>
+                       <Link to="/restcountries/"> Where is world?</Link>
                     </div>
                     <div className="header__switch" onClick={switchTheme}>
                     <IoMoon /> {theme}
